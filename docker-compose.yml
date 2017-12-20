@@ -1,0 +1,24 @@
+version: "3"
+services:
+  app:
+    image: webapp16
+    environment:
+      WWW_USER_ID: 1001
+      WWW_USER: 'guest'
+  links:
+    - db
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www:rw
+
+  db:
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: mypass
+      MYSQL_DATABASE: teampass
+      MYSQL_PASSWORD: teampass
+      MYSQL_USER: teampass
+    volumes:
+      - ./volumes/db:/var/lib/mysql:rw
