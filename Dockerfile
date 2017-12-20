@@ -42,7 +42,6 @@ ENV WWW_USER guest
 ENV WWW_USER_ID 1000
 
 COPY Configuration/apache2.conf /etc/apache2/apache2.conf
-COPY Configuration/sites-enabled/apache-vhost.conf /etc/apache2/teampass.conf
 
 RUN adduser --system --shell /bin/bash --no-create-home --uid ${WWW_USER_ID} --group --disabled-password --disabled-login ${WWW_USER}
 RUN sed -i -e "s~###DEFAULT_WWW_USER###~${WWW_USER}~g" /etc/apache2/apache2.conf

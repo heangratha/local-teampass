@@ -11,6 +11,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
+      - ./Configuration/sites-enabled/apache-vhost.conf:/etc/apache2/sites-enabled/teampass.conf:ro
+      - ./Configuration/ssl/:/opt/ssl:rw
       - .:/var/www:rw
 
   db:
