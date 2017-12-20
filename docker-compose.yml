@@ -5,8 +5,8 @@ services:
     environment:
       WWW_USER_ID: 1001
       WWW_USER: 'guest'
-  links:
-    - db
+    links:
+      - db
     ports:
       - "80:80"
       - "443:443"
