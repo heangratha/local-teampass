@@ -22,5 +22,7 @@ services:
       MYSQL_DATABASE: teampass
       MYSQL_PASSWORD: teampass
       MYSQL_USER: teampass
+    ports:
+      - "3306:3306"
     volumes:
       - ./volumes/db:/var/lib/mysql:rw
