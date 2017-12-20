@@ -20,8 +20,5 @@ if [ "${WWW_USER_ID}" != "${DEFAULT_WWW_USER_ID}" ]; then
 	groupmod --gid ${WWW_USER_ID} ${WWW_USER}
 fi
 
-# Starting cron service in the background
-/etc/init.d/cron start &
-
 # Run normal command
 exec "$@"
