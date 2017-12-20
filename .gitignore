@@ -4,5 +4,11 @@ volumes
 _utils/
 *.bck
 *.201*
-install1/
+install/
 backups/*.sql
+includes/config/settings.php
+includes/config/tp.config.php
+includes/libraries/csrfp/libs/csrfp.config.php
+includes/sk.php
+includes/teampass-seckey.txt
+

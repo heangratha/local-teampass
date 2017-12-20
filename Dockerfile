@@ -14,21 +14,22 @@ RUN apt-get install -y --no-install-recommends \
     mariadb-client-10.0 \
     openssl \
     php7.0 \
+    php7.0-bcmath \
     php7.0-cli \
     php7.0-gd \
-    libapache2-mod-php7.0 \
-    php7.0-mbstring \
     php7.0-curl \
-    php7.0-snmp \
-    php7.0-mysql \
+    php7.0-ldap \
+    php7.0-mbstring \
     php7.0-mcrypt \
+    php7.0-mysql \
     php7.0-opcache \
+    php7.0-snmp \
     php7.0-xml \
     php7.0-xsl \
     php7.0-zip \
     php-redis \
     php-imagick \
-    php7.0-bcmath
+    libapache2-mod-php7.0
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN dpkg --add-architecture i386
